@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="stars"></div>
+        <div class="calculator-box">
+            <h1>Age Calculator</h1>
+            <div class="input-group">
+                <label for="birthDate">Enter your birth date:</label>
+                <input type="date" id="birthDate" required>
+                <button onclick="calculateAge()">Calculate</button>
+            </div>
+            <div class="result" id="result">
+                <div class="result-item">
+                    <h3>Age</h3>
+                    <p><span id="years">-</span> years</p>
+                </div>
+                <div class="result-item">
+                    <h3>Months</h3>
+                    <p><span id="months">-</span> months</p>
+                </div>
+                <div class="result-item">
+                    <h3>Days</h3>
+                    <p><span id="days">-</span> days</p>
+                </div>
+                <div class="result-item">
+                    <h3>Minutes</h3>
+                    <p><span id="minutes">-</span> minutes</p>
+                </div>
+                <div class="result-item zodiac">
+                    <h3>Zodiac Sign</h3>
+                    <p><span id="zodiac">-</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
